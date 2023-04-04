@@ -1,0 +1,10 @@
+import { Router } from "express";
+import * as ApiController from "../controllers/apiController";
+const router=Router();
+router.get('/ping',ApiController.ping);
+router.post('/phrases', ApiController.createPhrase);
+router.get('/phrases', ApiController.listPhrases);
+router.get('/phrases/:id', ApiController.GetPhrase);
+router.delete('/phrases/:id', ApiController.DelPhrase);
+router.put('/phrases/:id', ApiController.UpdatePhrase);
+export default router;
